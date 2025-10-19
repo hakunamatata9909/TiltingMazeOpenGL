@@ -1,67 +1,67 @@
 # Tilting Maze Game (OpenGL)
 
-±â¿ï±â(tilting)·Î °øÀ» ±¼·Á ¹Ì·ÎÀÇ µµÂø ÁöÁ¡¿¡ µµ´ŞÇÏ´Â ÆÛÁñ °ÔÀÓ.  
+ê¸°ìš¸ê¸°(tilting)ë¡œ ê³µì„ êµ´ë ¤ ë¯¸ë¡œì˜ ë„ì°© ì§€ì ì— ë„ë‹¬í•˜ëŠ” í¼ì¦ ê²Œì„.  
 
-OpenGL API »ç¿ë.
-
----
-
-## ÁÖ¿ä ±â´É
-- Àç±Í DFS·Î ¹Ì·Î »ı¼º(2Ä­ ´ÜÀ§ º® Çã¹°±â)
-- ±â¿ï±â ±â¹İ ¹°¸®(°¡¼Ó/¸¶Âû/º® ¹İ»ç)
-- BFS ÃÖ´Ü°æ·Î ½Ã°¢È­(¸Ş´º ¡æ Find Path)
-- Á¶¸í/ÀçÁú Àû¿ë: º®(Å¥ºê), °ø(±¸), ¹Ù´Ú °æ·Î ÇÏÀÌ¶óÀÌÆ®
-
----
-## ÇÃ·¹ÀÌ È­¸é
-|ÀÌ¹ÌÁö1|ÀÌ¹ÌÁö2|
-|----|----|
+OpenGL API ì‚¬ìš©.
 
 ---
 
-## Á¶ÀÛ
-- È­»ìÇ¥: Å×ÀÌºí ±â¿ï±â(ÁÂ/¿ì, »ó/ÇÏ)
-- **Q / E**: Ä«¸Ş¶ó °Å¸® °¨¼Ò / Áõ°¡
-- **R / T**: °¡¼Óµµ °¨¼Ò / Áõ°¡
-- **W / A / S / D**: °İÀÚ ÇÑ Ä­ ½º³À ÀÌµ¿(º® Åë°ú ºÒ°¡, ¼Ó/°¡¼Ó 0)
-- **¿ìÅ¬¸¯ ¸Ş´º**: Reset Map / Find Path
-- Å¬¸®¾î ½Ã 2ÃÊ ÈÄ ¸Ê ¸®¼Â
+## ì£¼ìš” ê¸°ëŠ¥
+- ì¬ê·€ DFSë¡œ ë¯¸ë¡œ ìƒì„±(2ì¹¸ ë‹¨ìœ„ ë²½ í—ˆë¬¼ê¸°)
+- ê¸°ìš¸ê¸° ê¸°ë°˜ ë¬¼ë¦¬(ê°€ì†/ë§ˆì°°/ë²½ ë°˜ì‚¬)
+- BFS ìµœë‹¨ê²½ë¡œ ì‹œê°í™”(ë©”ë‰´ â†’ Find Path)
+- ì¡°ëª…/ì¬ì§ˆ ì ìš©: ë²½(íë¸Œ), ê³µ(êµ¬), ë°”ë‹¥ ê²½ë¡œ í•˜ì´ë¼ì´íŠ¸
+
+---
+## í”Œë ˆì´ í™”ë©´
+<img width="1089" height="630" alt="image" src="https://github.com/user-attachments/assets/fa7cc295-4380-45f7-9aec-17babb531afa" />
+
 
 ---
 
-## ºôµå È¯°æ
-- Windows + Visual Studio(MSVC) **x64 ±ÇÀå**
-- OpenGL Çì´õ(gl.h / glu.h): Windows SDK Æ÷ÇÔ
-- GLUT: **FreeGLUT ÇÊ¿ä**
+## ì¡°ì‘
+- í™”ì‚´í‘œ: í…Œì´ë¸” ê¸°ìš¸ê¸°(ì¢Œ/ìš°, ìƒ/í•˜)
+- **Q / E**: ì¹´ë©”ë¼ ê±°ë¦¬ ê°ì†Œ / ì¦ê°€
+- **R / T**: ê°€ì†ë„ ê°ì†Œ / ì¦ê°€
+- **W / A / S / D**: ê²©ì í•œ ì¹¸ ìŠ¤ëƒ… ì´ë™(ë²½ í†µê³¼ ë¶ˆê°€, ì†/ê°€ì† 0)
+- **ìš°í´ë¦­ ë©”ë‰´**: Reset Map / Find Path
+- í´ë¦¬ì–´ ì‹œ 2ì´ˆ í›„ ë§µ ë¦¬ì…‹
 
-### FreeGLUT ±¸¼º
-- Çì´õ: `include/`  
+---
+
+## ë¹Œë“œ í™˜ê²½
+- Windows + Visual Studio(MSVC) **x64 ê¶Œì¥**
+- OpenGL í—¤ë”(gl.h / glu.h): Windows SDK í¬í•¨
+- GLUT: **FreeGLUT í•„ìš”**
+
+### FreeGLUT êµ¬ì„±
+- í—¤ë”: `include/`  
   `freeglut.h`, `freeglut_std.h`, `freeglut_ext.h`, `glut.h`
-- ¶óÀÌºê·¯¸®: `lib/freeglut.lib` (MSVC x64)
-- DLL: ½ÇÇà Æú´õ(`x64/Debug/` µî) ¡æ `freeglut.dll`
+- ë¼ì´ë¸ŒëŸ¬ë¦¬: `lib/freeglut.lib` (MSVC x64)
+- DLL: ì‹¤í–‰ í´ë”(`x64/Debug/` ë“±) â†’ `freeglut.dll`
 
 ---
 
-## Æú´õ ±¸Á¶(¿¹½Ã)
+## í´ë” êµ¬ì¡°(ì˜ˆì‹œ)
 ```
 TiltingMazeGame/
-¦§¦¡ README.md
-¦§¦¡ TiltingMazeGame.vcxproj
-¦§¦¡ src/
-¦¢ ¦¦¦¡ TiltingMazeGame.cpp
-¦§¦¡ include/
-¦¢ ¦¦¦¡ GL/
-¦¢ ¦§¦¡ freeglut.h
-¦¢ ¦§¦¡ freeglut_std.h
-¦¢ ¦§¦¡ freeglut_ext.h
-¦¢ ¦¦¦¡ glut.h
-¦§¦¡ lib/
-¦¢ ¦¦¦¡ freeglut.lib
-¦¦¦¡ x64/
-¦¦¦¡ Debug/
-¦§¦¡ TiltingMazeGame.exe
-¦¦¦¡ freeglut.dll
+â”œâ”€ README.md
+â”œâ”€ TiltingMazeGame.vcxproj
+â”œâ”€ src/
+â”‚ â””â”€ TiltingMazeGame.cpp
+â”œâ”€ include/
+â”‚ â””â”€ GL/
+â”‚ â”œâ”€ freeglut.h
+â”‚ â”œâ”€ freeglut_std.h
+â”‚ â”œâ”€ freeglut_ext.h
+â”‚ â””â”€ glut.h
+â”œâ”€ lib/
+â”‚ â””â”€ freeglut.lib
+â””â”€ x64/
+â””â”€ Debug/
+â”œâ”€ TiltingMazeGame.exe
+â””â”€ freeglut.dll
 ```
 ---
-## Æ®·¯ºí ½´ÆÃ ÄÉÀÌ½º
+## íŠ¸ëŸ¬ë¸” ìŠˆíŒ… ì¼€ì´ìŠ¤
 
